@@ -4,6 +4,8 @@
 
 まとまっていない想いやサービスの魅力を整理し、コピー、構成、デザイン、Webまで一貫して形にすることを主軸にしています。
 
+公開URL: `https://kcw000.github.io/my-page/`
+
 ## 使用技術
 
 - HTML
@@ -84,8 +86,8 @@ Webやブランド制作に付随する制作として、以下の5項目を相�
 
 ## 実績URL
 
-- NENE LP: `https://pkurage-sudo.github.io/nene-lp/?utm_source=ig&utm_medium=social&utm_content=link_in_bio`
-- VINGO: `https://pkurage-sudo.github.io/VINGO/`
+- NENE LP: `https://kcw000.github.io/nene-lp/?utm_source=ig&utm_medium=social&utm_content=link_in_bio`
+- VINGO: `https://kcw000.github.io/VINGO/`
 
 ## 実績掲載許可の確認箇所
 
@@ -136,7 +138,7 @@ Product Design / Creative Productionの観点で、依頼者目線・信頼性�
 - Contactに、必須項目、予算未定、事前見積もりの安心材料を追加
 - スマホで長文が横にはみ出さないよう、折り返し指定を維持・補強
 
-公開前に、実績掲載許可、Formspree実送信、公開URL確定後のcanonical設定を確認してください。
+公開前に、実績掲載許可とFormspree実送信を確認してください。canonicalとOGPの公開URLは設定済みです。
 
 ## 2026-07-08 Hero / 導線再設計
 
@@ -292,7 +294,7 @@ python3 -m http.server 8000
 
 ### GitHub Pages
 
-ビルド処理は不要です。`main` ブランチのリポジトリ直下をGitHub Pagesの公開元に設定します。
+ビルド処理は不要です。`main` ブランチのリポジトリ直下をGitHub Pagesの公開元に設定しています。
 
 1. GitHub上に公開用リポジトリを作成
 2. ローカルリポジトリへ `origin` を設定
@@ -302,7 +304,7 @@ python3 -m http.server 8000
 6. Branchを `main`、フォルダを `/ (root)` に設定
 7. 発行された公開URLでトップページと `privacy.html` を確認
 
-公開URLが確定したら、`index.html` の `canonical`、`og:url`、`og:image`、`twitter:image` を公開URLに合わせて絶対URLで設定してください。公開URL確定前に推測値や仮URLは入れません。
+`index.html` の `canonical`、`og:url`、`og:image`、`twitter:image` と、`privacy.html` の `canonical` は公開URLに合わせて設定済みです。ユーザー名、リポジトリ名、公開URLを変更した場合はすべて同時に更新してください。
 
 ## 更新時の注意
 
@@ -326,4 +328,4 @@ python3 -m http.server 8000
 9. 通知メールの返信先が入力者のメールアドレスになっていることを確認する
 10. 迷惑メールフォルダを確認する
 11. ブラウザのコンソールエラーと横スクロールがないことを確認する
-12. 公開URLを確定後、canonicalとOGPの絶対URLを設定する
+12. canonicalとOGPの絶対URLが実際の公開URLと一致していることを確認する
