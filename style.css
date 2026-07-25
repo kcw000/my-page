@@ -70,6 +70,10 @@ textarea:focus-visible {
     scroll-behavior: auto !important;
     transition: none !important;
   }
+
+  .hero-video {
+    display: none;
+  }
 }
 
 h1,
@@ -334,6 +338,7 @@ figure {
   overflow: hidden;
   align-items: center;
   isolation: isolate;
+  background: var(--color-bg) url("visual/hero-main.jpg") center center / cover no-repeat;
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -349,6 +354,11 @@ figure {
   z-index: -2;
   object-fit: cover;
   object-position: center center;
+}
+
+.hero-video {
+  display: block;
+  border: 0;
 }
 
 .hero-overlay {
