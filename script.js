@@ -2,18 +2,49 @@ const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
 
 if (navToggle && siteNav) {
-  const closeMenu = () => {
+  const desktopQuery = window.matchMedia("(min-width: 900px)");
+
+  const syncMenuAccessibility = () => {
+    const isDesktop = desktopQuery.matches;
+    const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+
+    siteNav.toggleAttribute("inert", !isDesktop && !isOpen);
+
+    if (isDesktop) {
+      siteNav.removeAttribute("aria-hidden");
+    } else {
+      siteNav.setAttribute("aria-hidden", String(!isOpen));
+    }
+  };
+
+  const closeMenu = ({ returnFocus = false } = {}) => {
     navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "メニューを開く");
     siteNav.classList.remove("is-open");
     document.body.classList.remove("nav-open");
+    syncMenuAccessibility();
+
+    if (returnFocus) {
+      navToggle.focus();
+    }
+  };
+
+  const openMenu = () => {
+    navToggle.setAttribute("aria-expanded", "true");
+    navToggle.setAttribute("aria-label", "メニューを閉じる");
+    siteNav.classList.add("is-open");
+    document.body.classList.add("nav-open");
+    syncMenuAccessibility();
   };
 
   navToggle.addEventListener("click", () => {
     const isOpen = navToggle.getAttribute("aria-expanded") === "true";
 
-    navToggle.setAttribute("aria-expanded", String(!isOpen));
-    siteNav.classList.toggle("is-open", !isOpen);
-    document.body.classList.toggle("nav-open", !isOpen);
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
   });
 
   siteNav.addEventListener("click", (event) => {
@@ -25,8 +56,27 @@ if (navToggle && siteNav) {
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closeMenu();
+    const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+
+    if (event.key === "Escape" && isOpen) {
+      closeMenu({ returnFocus: true });
+      return;
+    }
+
+    if (event.key !== "Tab" || !isOpen || desktopQuery.matches) {
+      return;
+    }
+
+    const focusableItems = [navToggle, ...siteNav.querySelectorAll("a[href]")];
+    const firstItem = focusableItems[0];
+    const lastItem = focusableItems[focusableItems.length - 1];
+
+    if (event.shiftKey && document.activeElement === firstItem) {
+      event.preventDefault();
+      lastItem.focus();
+    } else if (!event.shiftKey && document.activeElement === lastItem) {
+      event.preventDefault();
+      firstItem.focus();
     }
   });
 
@@ -42,6 +92,13 @@ if (navToggle && siteNav) {
 
     closeMenu();
   });
+
+  desktopQuery.addEventListener("change", () => {
+    closeMenu();
+    syncMenuAccessibility();
+  });
+
+  syncMenuAccessibility();
 }
 
 const contactForm = document.querySelector(".contact-form");
@@ -49,8 +106,42 @@ const contactForm = document.querySelector(".contact-form");
 if (contactForm) {
   const submitButton = contactForm.querySelector(".submit-button");
   const statusMessage = contactForm.querySelector(".form-status-message");
+  const serviceSelect = contactForm.querySelector("#service");
+  const budgetHelp = contactForm.querySelector("#budget-help");
   const defaultButtonText = submitButton?.textContent || "相談内容を送信する";
   const requiredFields = contactForm.querySelectorAll("[required]");
+  const defaultBudgetHelp = "サービスにより目安が異なります。未定でも送信できます。";
+
+  const updateBudgetHelp = () => {
+    if (!budgetHelp || !(serviceSelect instanceof HTMLSelectElement)) {
+      return;
+    }
+
+    budgetHelp.textContent =
+      serviceSelect.value === "LP・Webページ制作"
+        ? "LP・Webページ制作の基本料金は80,000円です。内容により追加見積もりとなります。"
+        : defaultBudgetHelp;
+  };
+
+  document.querySelectorAll("[data-service]").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (!(serviceSelect instanceof HTMLSelectElement)) {
+        return;
+      }
+
+      const service = link.getAttribute("data-service");
+
+      if (!service || !Array.from(serviceSelect.options).some((option) => option.value === service)) {
+        return;
+      }
+
+      serviceSelect.value = service;
+      serviceSelect.dispatchEvent(new Event("change", { bubbles: true }));
+    });
+  });
+
+  serviceSelect?.addEventListener("change", updateBudgetHelp);
+  updateBudgetHelp();
 
   const getErrorMessage = (field) => {
     if (field instanceof HTMLInputElement && field.type === "checkbox") {
@@ -102,6 +193,18 @@ if (contactForm) {
         errorElement.textContent = "";
       }
     }
+  };
+
+  const showStatus = (message, className) => {
+    if (!statusMessage) {
+      return;
+    }
+
+    statusMessage.textContent = message;
+    statusMessage.classList.add(className);
+    statusMessage.hidden = false;
+    statusMessage.focus({ preventScroll: true });
+    statusMessage.scrollIntoView({ behavior: "smooth", block: "nearest" });
   };
 
   requiredFields.forEach((field) => {
@@ -162,18 +265,17 @@ if (contactForm) {
 
       contactForm.reset();
       requiredFields.forEach((field) => clearFieldError(field));
+      updateBudgetHelp();
 
-      if (statusMessage) {
-        statusMessage.textContent = "お問い合わせを送信しました。内容を確認のうえ、通常2〜3営業日以内を目安にご連絡します。";
-        statusMessage.classList.add("is-success");
-        statusMessage.hidden = false;
-      }
+      showStatus(
+        "お問い合わせを送信しました。内容を確認のうえ、通常2〜3営業日以内を目安にご連絡します。",
+        "is-success"
+      );
     } catch (error) {
-      if (statusMessage) {
-        statusMessage.textContent = "送信できませんでした。通信環境をご確認のうえ、時間を置いてもう一度お試しください。";
-        statusMessage.classList.add("is-error");
-        statusMessage.hidden = false;
-      }
+      showStatus(
+        "送信できませんでした。通信環境をご確認のうえ、時間を置いてもう一度お試しください。",
+        "is-error"
+      );
     } finally {
       if (submitButton instanceof HTMLButtonElement) {
         submitButton.disabled = false;
