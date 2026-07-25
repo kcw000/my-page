@@ -2769,6 +2769,16 @@ figure {
       linear-gradient(180deg, #eef4ff 0%, #f8fafc 100%);
   }
 
+  .hero::before {
+    position: absolute;
+    inset: 0 0 auto;
+    z-index: -3;
+    width: 100%;
+    height: 245px;
+    background: url("visual/hero-main.jpg") 68% center / cover no-repeat;
+    content: "";
+  }
+
   .hero-background {
     inset: 0 0 auto;
     height: 245px;
@@ -3088,7 +3098,7 @@ figure {
   }
 
   .faq-list details p {
-    padding: 0 17px 18px;
+    padding: 6px 17px 18px;
     font-size: 0.86rem;
     line-height: 1.75;
   }
@@ -3207,6 +3217,7 @@ figure {
     min-height: 640px;
   }
 
+  .hero::before,
   .hero-background {
     height: 218px;
   }

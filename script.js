@@ -123,6 +123,15 @@ if (contactForm) {
         : defaultBudgetHelp;
   };
 
+  const resetServiceSelection = () => {
+    if (!(serviceSelect instanceof HTMLSelectElement)) {
+      return;
+    }
+
+    serviceSelect.value = "";
+    updateBudgetHelp();
+  };
+
   document.querySelectorAll("[data-service]").forEach((link) => {
     link.addEventListener("click", () => {
       if (!(serviceSelect instanceof HTMLSelectElement)) {
@@ -141,7 +150,8 @@ if (contactForm) {
   });
 
   serviceSelect?.addEventListener("change", updateBudgetHelp);
-  updateBudgetHelp();
+  window.addEventListener("pageshow", resetServiceSelection);
+  resetServiceSelection();
 
   const getErrorMessage = (field) => {
     if (field instanceof HTMLInputElement && field.type === "checkbox") {
