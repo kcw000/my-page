@@ -2530,3 +2530,141 @@ figure {
     gap: 5px;
   }
 }
+
+/* 2026-07-25 user review corrections */
+.hero-overlay {
+  background:
+    linear-gradient(90deg, rgba(248, 250, 252, 0.99) 0%, rgba(248, 250, 252, 0.96) 38%, rgba(238, 244, 255, 0.72) 56%, rgba(238, 244, 255, 0.08) 80%),
+    linear-gradient(180deg, rgba(248, 250, 252, 0.18), rgba(238, 244, 255, 0.18));
+}
+
+.hero-title {
+  max-width: 740px;
+  margin-bottom: 20px;
+  font-size: clamp(2.9rem, 4.6vw, 4.3rem);
+  line-height: 1.15;
+}
+
+.hero-subcopy {
+  max-width: 620px;
+  margin-bottom: 14px;
+  color: var(--color-navy);
+  font-size: clamp(1rem, 1.5vw, 1.12rem);
+  font-weight: 750;
+  line-height: 1.8;
+}
+
+.hero .lead {
+  max-width: 600px;
+}
+
+.portfolio-work-featured .portfolio-work-media img {
+  object-position: center 28%;
+}
+
+.services-section {
+  background: var(--color-bg);
+}
+
+.service-cards {
+  align-items: stretch;
+}
+
+.service-card {
+  height: 100%;
+}
+
+.service-card .card-visual {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-position: center;
+}
+
+.consultation-card-grid .feature-card {
+  min-height: 100%;
+}
+
+.process-list {
+  display: grid;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.process-list > li {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  gap: 0;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.process-list > li::before {
+  display: none;
+}
+
+.process-step-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.process-step-icon {
+  box-sizing: content-box;
+  width: 28px;
+  height: 28px;
+  padding: 9px;
+  color: var(--color-royal);
+  background: var(--color-blue-pale);
+  border-radius: 12px;
+}
+
+.process-list strong {
+  margin: 0 0 10px;
+}
+
+@media (min-width: 720px) {
+  .consultation-card-grid,
+  .process-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1080px) {
+  .service-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .process-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .process-list > li {
+    display: flex;
+    padding: 28px;
+  }
+}
+
+@media (max-width: 719px) {
+  .hero-title {
+    max-width: 100%;
+    font-size: clamp(2.3rem, 10.8vw, 3.2rem);
+    line-height: 1.2;
+  }
+
+  .hero-subcopy {
+    font-size: 0.96rem;
+    line-height: 1.75;
+  }
+
+  .service-card .card-visual {
+    max-height: 210px;
+  }
+}

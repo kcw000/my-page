@@ -31,6 +31,10 @@
 
 WorksをHero直後へ移し、NENE LPを課題・対応・担当・結果まで読める主事例として掲載しています。LILTとかくれ本は実在企業から受注した案件ではないため、画面上で `自主制作｜架空LP` と明示しています。
 
+Heroのメインコピーは「伝えたい想いを、伝わる言葉とデザインに。」です。「まだ言葉になっていない魅力を、問い合わせにつながるLPへ。」は補足コピーとして小さく表示します。
+
+Services、相談できる状態・依頼する理由、Processは、文章だけの一覧にせず、既存ビジュアルまたはローカル線画アイコンを使ったカード形式で表示します。
+
 コピー・ブランド言語設計は、採用・掲載許可の区分を確認できていないため、企業名を伏せた `提案例｜匿名掲載` としています。確認できるまでは実案件や採用実績として扱わないでください。
 
 ## 使用技術
@@ -61,6 +65,8 @@ WorksをHero直後へ移し、NENE LPを課題・対応・担当・結果まで�
     ├── works/
     │   ├── kakurebon-lp.png
     │   ├── lilt-lp.jpg
+    │   ├── nene-cover-source.png
+    │   ├── nene-cover.jpg
     │   └── nene-lp.png
     ├── hero-main.jpg
     ├── ogp.jpg
@@ -72,12 +78,16 @@ WorksをHero直後へ移し、NENE LPを課題・対応・担当・結果まで�
 - `visual/hero-main.jpg`: Hero表示用。元画像をWeb表示向けJPEGへ軽量化
 - `visual/ogp.jpg`: 1200 × 630pxのOGP / Twitter Card画像
 - `photo/profile.jpg`: Aboutのプロフィール写真
-- `visual/works/nene-lp.png`: NENE LPの公開画面
+- `visual/works/nene-cover.jpg`: WorksのNENE代表事例に表示する軽量カバー画像
+- `visual/works/nene-cover-source.png`: 採用したNENEカバー画像の原本
+- `visual/works/nene-lp.png`: 以前使用していたNENE LPの公開画面
 - `visual/works/lilt-lp.jpg`: LILT Dance & Conditioningの公開画面
 - `visual/works/kakurebon-lp.png`: かくれ本LPの公開画面
 - `visual/icons/*.svg`: ローカル保存したLucide線画アイコン
 
 HeroやWorks画像を差し替える場合は、HTMLの参照先を変えず、同名ファイルを適切な寸法・容量で置き換えると管理しやすくなります。人物や制作画面を確認できない場合は、推測した代替画像を作らず、公開前に素材を確認してください。
+
+NENEのカバーは、候補画像のうち顔全体が見え、PC・スマホ双方のトリミングに耐えやすい画像を採用しています。表示には軽量版を使い、選定の根拠を後から確認できるよう原本も保存しています。
 
 `visual/icons/*.svg` はLucide 1.8.0（ISC License）です。ライセンス本文は `visual/icons/LICENSE.txt` に保存しています。線画以外の立体アイコン、発光、過度なグラデーションを混在させないでください。
 
