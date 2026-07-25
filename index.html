@@ -17,7 +17,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://kcw000.github.io/my-page/visual/visual_02.png">
     <link rel="icon" href="visual/visual_02.png" type="image/png">
-    <link rel="stylesheet" href="style.css?v=20260714-4">
+    <link rel="stylesheet" href="style.css?v=20260725-1">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -149,25 +149,49 @@
             <h2>作る前に、伝わらない原因を切り分けます。</h2>
             <p>見た目だけ整えても、言葉と導線が曖昧なままだと問い合わせにはつながりません。</p>
           </div>
-          <ul class="problem-grid">
-            <li>サービスの魅力を、うまく言葉にできない</li>
-            <li>何をWebサイトに載せればよいかわからない</li>
-            <li>文章、デザイン、実装を別々に頼むのが大変</li>
-            <li>自分らしさは残しながら、仕事として信頼される形にしたい</li>
-            <li>AIで文章を作ってみたが、しっくりこない</li>
-            <li>SNSだけでは情報が流れ、活動の全体像が伝わりにくい</li>
-          </ul>
+          <div class="diagnosis-map" aria-label="伝わらない原因の整理">
+            <article class="diagnosis-card">
+              <img class="ui-icon ui-icon-medium" src="visual/icons/message-circle-question.svg" alt="" aria-hidden="true" width="24" height="24">
+              <div>
+                <h3>言葉が定まらない</h3>
+                <ul>
+                  <li>サービスの魅力を言葉にできない</li>
+                  <li>AIで作った文章がしっくりこない</li>
+                </ul>
+              </div>
+            </article>
+            <article class="diagnosis-card">
+              <img class="ui-icon ui-icon-medium" src="visual/icons/scan-text.svg" alt="" aria-hidden="true" width="24" height="24">
+              <div>
+                <h3>情報が散らばる</h3>
+                <ul>
+                  <li>Webに載せる内容が決まらない</li>
+                  <li>SNSだけでは活動の全体像が伝わりにくい</li>
+                </ul>
+              </div>
+            </article>
+            <article class="diagnosis-card">
+              <img class="ui-icon ui-icon-medium" src="visual/icons/workflow.svg" alt="" aria-hidden="true" width="24" height="24">
+              <div>
+                <h3>制作が分断する</h3>
+                <ul>
+                  <li>文章、デザイン、実装を別々に頼むのが大変</li>
+                  <li>自分らしさと仕事の信頼感を両立したい</li>
+                </ul>
+              </div>
+            </article>
+          </div>
           <div class="outcome-panel">
             <div>
               <p class="eyebrow">After</p>
               <h3>制作後に整えるもの</h3>
             </div>
-            <ul>
-              <li>価値を言語化する</li>
-              <li>伝える順番を設計する</li>
-              <li>信頼される見た目へ整える</li>
-              <li>公開できるWebへ落とし込む</li>
-            </ul>
+            <ol class="outcome-flow">
+              <li><img class="ui-icon" src="visual/icons/message-circle.svg" alt="" aria-hidden="true" width="24" height="24"><strong>言葉</strong><span>価値を言語化</span></li>
+              <li><img class="ui-icon" src="visual/icons/route.svg" alt="" aria-hidden="true" width="24" height="24"><strong>構成</strong><span>伝える順番を設計</span></li>
+              <li><img class="ui-icon" src="visual/icons/panels-top-left.svg" alt="" aria-hidden="true" width="24" height="24"><strong>デザイン</strong><span>信頼感を整える</span></li>
+              <li><img class="ui-icon" src="visual/icons/monitor-check.svg" alt="" aria-hidden="true" width="24" height="24"><strong>Web</strong><span>公開できる形へ</span></li>
+            </ol>
           </div>
         </div>
       </section>
@@ -181,21 +205,27 @@
         </div>
         <div class="comparison-grid">
           <article class="comparison-card">
-            <span>一般的な分業で起こりやすいこと</span>
+            <div class="comparison-card-heading">
+              <img class="ui-icon" src="visual/icons/split.svg" alt="" aria-hidden="true" width="24" height="24">
+              <span>一般的な分業で起こりやすいこと</span>
+            </div>
             <ul>
-              <li>原稿は依頼者側で用意する前提になる</li>
-              <li>デザインは良いが、何を頼めるかが弱い</li>
-              <li>AIで整えた文章が自分の言葉に見えない</li>
-              <li>制作会社に頼むには予算や規模が合わない</li>
+              <li>原稿準備が依頼者側に残る</li>
+              <li>言葉と見た目が分断する</li>
+              <li>AI文が本人の言葉に見えない</li>
+              <li>予算や規模が合いにくい</li>
             </ul>
           </article>
           <article class="comparison-card is-primary">
-            <span>Kai Creative Worksで行うこと</span>
+            <div class="comparison-card-heading">
+              <img class="ui-icon" src="visual/icons/route.svg" alt="" aria-hidden="true" width="24" height="24">
+              <span>Kai Creative Worksで行うこと</span>
+            </div>
             <ul>
-              <li>ヒアリングから強みと提供価値を整理する</li>
-              <li>コピー、構成、デザイン、実装を一つの流れで設計する</li>
-              <li>AIは補助に使い、表現判断は人が行う</li>
-              <li>小さく始められる1ページLPとして公開する</li>
+              <li>ヒアリングから価値を整理</li>
+              <li>コピーから実装まで一貫設計</li>
+              <li>AIは補助、表現判断は人</li>
+              <li>小さく始める1ページLP</li>
             </ul>
           </article>
         </div>
@@ -265,11 +295,11 @@
           </div>
           <div class="other-production">
             <ul class="other-production-list" aria-label="その他の制作項目">
-              <li class="other-production-item">フライヤー・ポスター</li>
-              <li class="other-production-item">SNS画像</li>
-              <li class="other-production-item">YouTubeサムネイル</li>
-              <li class="other-production-item">動画編集</li>
-              <li class="other-production-item">簡易BGM制作</li>
+              <li class="other-production-item"><img src="visual/icons/image.svg" alt="" aria-hidden="true" width="24" height="24">フライヤー・ポスター</li>
+              <li class="other-production-item"><img src="visual/icons/images.svg" alt="" aria-hidden="true" width="24" height="24">SNS画像</li>
+              <li class="other-production-item"><img src="visual/icons/image-play.svg" alt="" aria-hidden="true" width="24" height="24">YouTubeサムネイル</li>
+              <li class="other-production-item"><img src="visual/icons/video.svg" alt="" aria-hidden="true" width="24" height="24">動画編集</li>
+              <li class="other-production-item"><img src="visual/icons/audio-lines.svg" alt="" aria-hidden="true" width="24" height="24">簡易BGM制作</li>
             </ul>
             <p class="estimate-note">内容に応じて都度お見積もり</p>
           </div>
@@ -283,10 +313,10 @@
           <h2>選ばれる理由</h2>
         </div>
         <div class="feature-grid">
-          <article class="feature-card"><span>01</span><h3>言葉が決まっていなくても相談できる</h3><p>ヒアリングを通して、サービスの特徴や大切にしていることを整理します。原稿を完成させてから依頼する必要はありません。</p></article>
-          <article class="feature-card"><span>02</span><h3>コピー、構成、デザイン、実装までつながる</h3><p>文章だけ、見た目だけで分断せず、Web上でどう伝わるかまで一つの流れで考えます。</p></article>
-          <article class="feature-card"><span>03</span><h3>一人の担当者が最後まで対応する</h3><p>ヒアリングから公開まで担当者が変わらないため、意図や世界観がぶれにくく、やり取りもシンプルです。</p></article>
-          <article class="feature-card"><span>04</span><h3>AIを補助に使い、判断は人が行う</h3><p>情報整理や実装補助にはAIを活用しながら、コンセプト、コピーの選定、修正、最終確認は本人が責任を持って行います。</p></article>
+          <article class="feature-card"><div class="feature-card-head"><span class="feature-number">01</span><img class="ui-icon ui-icon-medium" src="visual/icons/message-circle-question.svg" alt="" aria-hidden="true" width="24" height="24"></div><h3>言葉が決まっていなくても相談できる</h3><p>ヒアリングを通して、サービスの特徴や大切にしていることを整理します。原稿を完成させてから依頼する必要はありません。</p></article>
+          <article class="feature-card"><div class="feature-card-head"><span class="feature-number">02</span><img class="ui-icon ui-icon-medium" src="visual/icons/workflow.svg" alt="" aria-hidden="true" width="24" height="24"></div><h3>コピー、構成、デザイン、実装までつながる</h3><p>文章だけ、見た目だけで分断せず、Web上でどう伝わるかまで一つの流れで考えます。</p></article>
+          <article class="feature-card"><div class="feature-card-head"><span class="feature-number">03</span><img class="ui-icon ui-icon-medium" src="visual/icons/user-round-check.svg" alt="" aria-hidden="true" width="24" height="24"></div><h3>一人の担当者が最後まで対応する</h3><p>ヒアリングから公開まで担当者が変わらないため、意図や世界観がぶれにくく、やり取りもシンプルです。</p></article>
+          <article class="feature-card"><div class="feature-card-head"><span class="feature-number">04</span><img class="ui-icon ui-icon-medium" src="visual/icons/shield-check.svg" alt="" aria-hidden="true" width="24" height="24"></div><h3>AIを補助に使い、判断は人が行う</h3><p>情報整理や実装補助にはAIを活用しながら、コンセプト、コピーの選定、修正、最終確認は本人が責任を持って行います。</p></article>
         </div>
       </section>
 
@@ -296,63 +326,65 @@
           <div class="section-heading">
             <p class="eyebrow">Works</p>
             <h2>制作実績</h2>
-            <p>見た目だけでなく、課題、担当範囲、考えたこと、確認できる結果を整理しています。</p>
+            <p>実案件と自主制作を通して、言葉の設計からデザイン、実装まで一貫して制作しています。</p>
           </div>
-          <div class="proof-grid" aria-label="実績で確認できること">
-            <article>
-              <span>LP制作</span>
-              <strong>NENE LP</strong>
-              <p>活動紹介、依頼導線、SNSリンクを1ページに整理。公開後、このLPを見た別事業者からWeb制作相談につながりました。</p>
-            </article>
-            <article>
-              <span>Webアプリ</span>
-              <strong>VINGO</strong>
-              <p>イベント現場でスマホから使えるWebアプリとして、企画、仕様、UI、実装、公開まで担当。</p>
-            </article>
-            <article>
-              <span>Copywriting</span>
-              <strong>ブランド言語設計</strong>
-              <p>課題、提案コピー、意図を整理。公開前に掲載許可が必要な案件は管理用クラスで区別しています。</p>
-            </article>
-          </div>
-          <div class="works-grid">
-            <article class="work-card case-study-card is-featured-work">
-              <div class="case-visual" role="img" aria-label="NENE LPのケーススタディビジュアル">
-                <span>NENE LP</span>
-                <ul><li>Profile LP</li><li>Dance</li><li>Responsive</li><li>Copy / Design / Web</li></ul>
+          <div class="portfolio-works-grid">
+            <article class="portfolio-work-card">
+              <div class="portfolio-work-media">
+                <img src="visual/works/nene-lp.png" alt="NENE LPのデザイン" width="1440" height="900" loading="lazy">
               </div>
-              <div class="work-body">
-                <p class="tag">ダンサー / イベント主催者向け活動紹介LP</p>
+              <div class="portfolio-work-body">
+                <p class="work-label work-label-client">実案件｜公開中</p>
                 <h3>NENE LP</h3>
-                <h4>課題</h4>
-                <p>SNSでは活動の雰囲気は伝わる一方で、初めて知った人がプロフィール、実績、依頼内容を一覧で確認できる場所が必要でした。</p>
-                <h4>提案</h4>
-                <p>プロフィール、活動内容、実績、依頼導線、SNS・動画リンクを1ページに整理し、スマートフォンでも読みやすいLPとして設計しました。</p>
-                <h4>担当範囲</h4>
-                <div class="work-scope-groups">
-                  <section class="work-scope-group">
-                    <h5>企画・設計</h5>
-                    <ul class="work-scope-tags"><li>ヒアリング</li><li>コンセプト整理</li><li>構成</li></ul>
-                  </section>
-                  <section class="work-scope-group">
-                    <h5>コンテンツ</h5>
-                    <ul class="work-scope-tags"><li>コピー・文章整理</li><li>写真選定</li></ul>
-                  </section>
-                  <section class="work-scope-group">
-                    <h5>デザイン・実装</h5>
-                    <ul class="work-scope-tags"><li>デザイン</li><li>レスポンシブ対応</li><li>コーディング</li></ul>
-                  </section>
-                  <section class="work-scope-group">
-                    <h5>公開・運用</h5>
-                    <ul class="work-scope-tags"><li>問い合わせフォーム</li><li>GitHub Pages公開</li><li>公開後の調整</li></ul>
-                  </section>
+                <p class="portfolio-work-copy">ダンサー・イベント主催者のプロフィール、活動内容、実績、依頼導線を1ページに整理。公開後、このLPを見た別事業者からWeb制作相談につながりました。</p>
+                <ul class="portfolio-work-tags" aria-label="NENE LPの担当領域">
+                  <li>#LP制作</li>
+                  <li>#情報設計</li>
+                  <li>#Webデザイン</li>
+                </ul>
+                <div class="portfolio-work-actions">
+                  <a class="button secondary small" href="https://kcw000.github.io/nene-lp/" target="_blank" rel="noopener noreferrer">サイトを見る</a>
                 </div>
-                <h4>成果</h4>
-                <p>公開後、このLPを見た別の事業者から、Webサイト制作の相談につながりました。</p>
-                <h4>制作で重視した点</h4>
-                <p>初めて見た人が、活動内容、依頼できること、連絡先まで迷わず確認できる構成を重視しました。</p>
-                <div class="button-row">
-                  <a class="button primary small" href="https://kcw000.github.io/nene-lp/?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" rel="noopener noreferrer">サイトを見る</a>
+              </div>
+            </article>
+
+            <article class="portfolio-work-card">
+              <div class="portfolio-work-media portfolio-work-media-status" role="img" aria-label="LILT Dance & Conditioningの公開画面は確認中">
+                <span>LILT</span>
+                <small>Dance &amp; Conditioning</small>
+                <p>公開画面を確認中</p>
+              </div>
+              <div class="portfolio-work-body">
+                <p class="work-label">自主制作｜架空LP</p>
+                <h3>LILT Dance &amp; Conditioning</h3>
+                <p class="portfolio-work-copy">ダンス初心者や運動に不安を持つ人が、安心して一歩を踏み出せることを目指したダンススタジオLP。疑問を順番に解消し、体験レッスンの申込みまで迷わず進める構成を設計しました。</p>
+                <ul class="portfolio-work-tags" aria-label="LILT Dance & Conditioningの担当領域">
+                  <li>#LP制作</li>
+                  <li>#コピーライティング</li>
+                  <li>#Webデザイン</li>
+                </ul>
+                <div class="portfolio-work-actions">
+                  <span class="button secondary small is-disabled" aria-disabled="true">公開URL確認中</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="portfolio-work-card">
+              <div class="portfolio-work-media">
+                <img src="visual/works/kakurebon-lp.png" alt="かくれ本キャンペーンLPのデザイン" width="1440" height="900" loading="lazy">
+              </div>
+              <div class="portfolio-work-body">
+                <p class="work-label">自主制作｜架空LP</p>
+                <h3>かくれ本｜言葉で本を選ぶキャンペーン</h3>
+                <p class="portfolio-work-copy">表紙やタイトルではなく、3つの言葉を手がかりに本を選ぶ架空の書店キャンペーンLP。企画コンセプトからコピー、情報設計、イラストを活かした画面構成、PC／スマホ実装まで一貫して制作しました。</p>
+                <p class="portfolio-work-note">実在する書店キャンペーンではありません。</p>
+                <ul class="portfolio-work-tags" aria-label="かくれ本キャンペーンLPの担当領域">
+                  <li>#企画設計</li>
+                  <li>#LP制作</li>
+                  <li>#コピーライティング</li>
+                </ul>
+                <div class="portfolio-work-actions">
+                  <a class="button secondary small" href="https://kakurebon-campaign.ka1note.chatgpt.site" target="_blank" rel="noopener noreferrer">サイトを見る</a>
                 </div>
               </div>
             </article>
@@ -367,41 +399,6 @@
               <article class="copy-work-card requires-permission"><h4>カーハピネス</h4><dl class="copy-case-list"><div><dt>課題</dt><dd>山陰エリアで廃車買取を検討する人に、地域性と直接買取の強みを伝えること。</dd></div><div><dt>担当</dt><dd>競合分析 / ターゲット整理 / ファーストビュー / セールスコピー</dd></div><div><dt>提案コピー</dt><dd>地域の利用者が安心して相談できるよう、直接買取の強みを前面に整理。</dd></div><div><dt>意図</dt><dd>価格訴求だけに寄せず、地域で相談しやすい企業として見える導線を意識しました。</dd></div></dl></article>
             </div>
           </div>
-
-          <article class="work-card case-study-card">
-            <div class="case-visual" role="img" aria-label="VINGOのケーススタディビジュアル">
-              <span>VINGO</span>
-              <ul><li>Web App</li><li>Event Tool</li><li>Mobile First</li><li>UI / Web</li></ul>
-            </div>
-            <div class="work-body">
-              <p class="tag">自主制作 / イベント向けスマホWebアプリ</p>
-              <h3>VINGO</h3>
-              <h4>課題</h4>
-              <p>イベント中の参加感を高めるため、紙を配らず、スマートフォンでその場で遊べる仕組みを検討しました。</p>
-              <h4>提案</h4>
-              <p>3×3ビンゴWebアプリとして、ランダム生成、確定、セルタップ、ビンゴ演出、タイムスタンプ表示などを設計しました。</p>
-              <h4>担当範囲</h4>
-              <div class="work-scope-groups">
-                <section class="work-scope-group">
-                  <h5>企画・設計</h5>
-                  <ul class="work-scope-tags"><li>企画</li><li>仕様設計</li></ul>
-                </section>
-                <section class="work-scope-group">
-                  <h5>UI・実装</h5>
-                  <ul class="work-scope-tags"><li>UI調整</li><li>Web実装</li></ul>
-                </section>
-                <section class="work-scope-group">
-                  <h5>検証・公開</h5>
-                  <ul class="work-scope-tags"><li>動作確認</li><li>GitHub Pages公開</li></ul>
-                </section>
-              </div>
-              <h4>工夫</h4>
-              <p>イベント現場で迷わず使えるよう、スマートフォンを優先したシンプルな操作性を重視しました。</p>
-              <div class="button-row">
-                <a class="button primary small" href="https://kcw000.github.io/VINGO/" target="_blank" rel="noopener noreferrer">サイトを見る</a>
-              </div>
-            </div>
-          </article>
         </div>
       </section>
 
@@ -459,7 +456,7 @@
           <li>
             <div class="process-step-top">
               <span class="process-step-number">01</span>
-              <svg class="process-step-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path><path d="M8 9h8M8 13h5"></path></svg>
+              <img class="process-step-icon" src="visual/icons/message-circle.svg" alt="" aria-hidden="true" width="24" height="24">
             </div>
             <strong>相談・状況整理</strong>
             <p>目的、現状、困っていること、参考イメージを確認します。原稿がなくても相談できます。</p>
@@ -467,7 +464,7 @@
           <li>
             <div class="process-step-top">
               <span class="process-step-number">02</span>
-              <svg class="process-step-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5h6M9 3h6v4H9z"></path><path d="M7 5H5v16h14V5h-2M8 12l2 2 4-4M8 18h8"></path></svg>
+              <img class="process-step-icon" src="visual/icons/clipboard-check.svg" alt="" aria-hidden="true" width="24" height="24">
             </div>
             <strong>範囲設計・見積もり</strong>
             <p>必要な制作範囲、料金、納期、修正回数を整理し、事前に見積もりをご案内します。</p>
@@ -475,7 +472,7 @@
           <li>
             <div class="process-step-top">
               <span class="process-step-number">03</span>
-              <svg class="process-step-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM4 9h16M9 9v11"></path><path d="m13 15 5-5 2 2-5 5-3 1z"></path></svg>
+              <img class="process-step-icon" src="visual/icons/panels-top-left.svg" alt="" aria-hidden="true" width="24" height="24">
             </div>
             <strong>コピー・構成・デザイン制作</strong>
             <p>誰に何をどの順番で伝えるかを決め、文章と見た目を一体で作ります。</p>
@@ -483,7 +480,7 @@
           <li>
             <div class="process-step-top">
               <span class="process-step-number">04</span>
-              <svg class="process-step-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18v13H3zM8 21h8M12 17v4"></path><path d="m8 10 3 3 5-6"></path></svg>
+              <img class="process-step-icon" src="visual/icons/monitor-check.svg" alt="" aria-hidden="true" width="24" height="24">
             </div>
             <strong>実装・確認・公開</strong>
             <p>スマホ表示、リンク、フォーム、文章を確認し、公開または納品できる状態に整えます。</p>

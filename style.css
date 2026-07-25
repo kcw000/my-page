@@ -387,7 +387,7 @@ figure {
 
 .card,
 .feature-card,
-.work-card,
+.portfolio-work-card,
 .copy-work-card,
 .content-panel,
 .price-list article,
@@ -398,7 +398,6 @@ figure {
   box-shadow: var(--shadow-card);
 }
 
-.problem-grid,
 .trust-list,
 .service-card ul,
 .copy-work-card > ul {
@@ -409,12 +408,12 @@ figure {
   list-style: none;
 }
 
-.problem-grid {
-  grid-template-columns: 1fr;
+.diagnosis-map {
+  display: grid;
+  gap: 16px;
   margin-bottom: 24px;
 }
 
-.problem-grid li,
 .trust-list li,
 .service-card li,
 .copy-work-card > ul > li {
@@ -426,9 +425,61 @@ figure {
   color: var(--color-text-muted);
 }
 
+.ui-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+}
+
+.ui-icon-medium {
+  width: 28px;
+  height: 28px;
+  flex-basis: 28px;
+}
+
+.diagnosis-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+.diagnosis-card > .ui-icon {
+  box-sizing: content-box;
+  padding: 10px;
+  background: var(--color-blue-pale);
+  border: 1px solid rgba(49, 87, 213, 0.16);
+  border-radius: 12px;
+}
+
+.diagnosis-card h3 {
+  margin: 2px 0 10px;
+  font-size: 1.05rem;
+}
+
+.diagnosis-card ul {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.diagnosis-card li {
+  padding-left: 10px;
+  color: var(--color-text-muted);
+  border-left: 2px solid rgba(49, 87, 213, 0.2);
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
 .outcome-panel,
-.comparison-card,
-.proof-grid article {
+.comparison-card {
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
@@ -448,7 +499,6 @@ figure {
   margin-bottom: 0;
 }
 
-.outcome-panel ul,
 .comparison-card ul {
   display: grid;
   gap: 10px;
@@ -457,20 +507,53 @@ figure {
   list-style: none;
 }
 
-.outcome-panel li,
 .comparison-card li {
   position: relative;
   padding-left: 22px;
   color: var(--color-text-muted);
 }
 
-.outcome-panel li::before,
 .comparison-card li::before {
   position: absolute;
   left: 0;
   color: var(--color-royal);
   font-weight: 900;
   content: "•";
+}
+
+.outcome-flow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.outcome-flow li {
+  display: grid;
+  min-width: 0;
+  gap: 5px;
+  align-content: start;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(49, 87, 213, 0.14);
+  border-radius: 14px;
+}
+
+.outcome-flow .ui-icon {
+  margin-bottom: 5px;
+}
+
+.outcome-flow strong {
+  color: var(--color-navy);
+  font-size: 0.95rem;
+}
+
+.outcome-flow span {
+  color: var(--color-text-muted);
+  font-size: 0.84rem;
+  line-height: 1.5;
 }
 
 .comparison-grid {
@@ -482,13 +565,21 @@ figure {
   padding: 28px;
 }
 
-.comparison-card > span,
-.proof-grid span {
-  display: inline-flex;
-  margin-bottom: 16px;
+.comparison-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
   color: var(--color-royal);
-  font-size: 0.875rem;
-  font-weight: 900;
+  font-size: 0.9rem;
+  font-weight: 850;
+}
+
+.comparison-card-heading .ui-icon {
+  box-sizing: content-box;
+  padding: 8px;
+  background: var(--color-blue-pale);
+  border-radius: 10px;
 }
 
 .comparison-card.is-primary {
@@ -498,7 +589,6 @@ figure {
   border-color: rgba(49, 87, 213, 0.24);
 }
 
-.problem-grid li::before,
 .trust-list li::before,
 .service-card li::before,
 .copy-work-card > ul > li::before {
@@ -522,15 +612,14 @@ figure {
 .copy-work-grid,
 .price-list,
 .process-list,
-.other-production,
-.works-grid {
+.other-production {
   display: grid;
   gap: 24px;
 }
 
 .card p,
 .feature-card p,
-.work-card p,
+.portfolio-work-card p,
 .copy-work-card p,
 .price-list p,
 .process-list p,
@@ -648,6 +737,9 @@ figure {
 }
 
 .other-production-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   max-width: 100%;
   padding: 10px 14px;
   color: var(--color-navy);
@@ -658,6 +750,12 @@ figure {
   line-height: 1.35;
   overflow-wrap: normal;
   white-space: nowrap;
+}
+
+.other-production-item img {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
 }
 
 .estimate-note {
@@ -672,141 +770,176 @@ figure {
   margin-top: 14px;
 }
 
-.feature-card span {
+.feature-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.feature-card .feature-number {
   display: inline-flex;
-  margin-bottom: 18px;
+  min-width: 44px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
   color: var(--color-royal);
-  font-family: "Yu Mincho", "Hiragino Mincho ProN", YuMincho, serif;
-  font-size: clamp(2.4rem, 6vw, 4.6rem);
-  line-height: 0.9;
-  font-weight: 900;
+  background: var(--color-blue-pale);
+  border: 1px solid rgba(49, 87, 213, 0.22);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0.05em;
 }
 
-.case-study-card {
-  overflow: hidden;
+.feature-card-head .ui-icon {
+  box-sizing: content-box;
+  padding: 8px;
+  background: rgba(238, 244, 255, 0.7);
+  border-radius: 10px;
 }
 
-.case-visual {
+.portfolio-works-grid {
   display: grid;
-  min-height: 230px;
-  align-content: center;
-  gap: 22px;
-  padding: 28px;
-  background:
-    linear-gradient(135deg, rgba(49, 87, 213, 0.1), rgba(238, 244, 255, 0.72)),
-    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0 1px, transparent 1px 18px);
+  gap: 24px;
+}
+
+.portfolio-work-card {
+  display: flex;
+  min-width: 0;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.portfolio-work-media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--color-blue-pale);
   border-bottom: 1px solid var(--color-border);
 }
 
-.case-visual span {
-  font-size: clamp(2rem, 7vw, 4.2rem);
-  font-family: "Yu Mincho", "Hiragino Mincho ProN", YuMincho, serif;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: 0;
+.portfolio-work-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
 }
 
-.case-visual ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.case-visual li {
-  padding: 7px 10px;
-  color: var(--color-royal);
-  background: rgba(255, 255, 255, 0.76);
-  border: 1px solid rgba(110, 139, 255, 0.3);
-  border-radius: 999px;
-  font-size: 0.875rem;
-  font-weight: 750;
-}
-
-.work-body {
-  padding: 28px;
-}
-
-.work-body h4 {
-  margin-top: 22px;
-}
-
-.work-scope-groups {
+.portfolio-work-media-status {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 12px;
-}
-
-.work-scope-groups.compact {
-  grid-template-columns: 1fr;
-  gap: 10px;
-  margin-top: 18px;
-}
-
-.work-scope-group {
-  min-width: 0;
-  padding: 16px;
-  background: rgba(248, 250, 252, 0.86);
-  border: 1px solid var(--color-border);
-  border-radius: 18px;
-}
-
-.work-scope-tags {
-  display: flex;
-  flex-wrap: wrap;
+  align-content: center;
+  justify-items: center;
   gap: 8px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  padding: 24px;
+  color: var(--color-navy);
+  text-align: center;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(238, 244, 255, 0.88)),
+    var(--color-blue-pale);
 }
 
-.work-scope-tags li {
-  max-width: 100%;
-  padding: 6px 9px;
-  color: var(--color-navy);
-  background: var(--color-surface);
-  border: 1px solid rgba(110, 139, 255, 0.28);
-  border-radius: 999px;
-  font-size: 0.875rem;
-  font-weight: 750;
-  line-height: 1.35;
+.portfolio-work-media-status span {
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", YuMincho, serif;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1;
+}
+
+.portfolio-work-media-status small {
+  color: var(--color-royal);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.portfolio-work-media-status p {
+  margin-top: 14px;
+  font-size: 0.82rem;
+}
+
+.portfolio-work-body {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  padding: 26px;
+}
+
+.portfolio-work-body h3 {
+  margin: 14px 0 14px;
+  font-size: clamp(1.28rem, 2.4vw, 1.55rem);
+  line-height: 1.45;
   overflow-wrap: anywhere;
 }
 
-.tag {
+.work-label {
   display: inline-flex;
-  margin-bottom: 12px;
+  align-self: flex-start;
+  margin: 0;
+  padding: 6px 10px;
   color: var(--color-royal);
+  background: var(--color-blue-pale);
+  border: 1px solid rgba(49, 87, 213, 0.2);
+  border-radius: 999px;
+  font-size: 0.78rem;
   font-weight: 850;
+  line-height: 1.35;
+}
+
+.work-label-client {
+  color: var(--color-navy);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.portfolio-work-copy {
+  line-height: 1.8;
+}
+
+.portfolio-work-note {
+  margin-top: 10px;
+  padding-left: 11px;
+  border-left: 2px solid rgba(49, 87, 213, 0.28);
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.portfolio-work-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.portfolio-work-tags li {
+  color: var(--color-royal);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.portfolio-work-actions {
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.portfolio-work-actions .button {
+  width: 100%;
+}
+
+.button.is-disabled {
+  color: #68728a;
+  background: #eef1f6;
+  border-color: #d7dce8;
+  cursor: not-allowed;
+  opacity: 1;
 }
 
 .copy-work-block {
   margin: 38px 0;
-}
-
-.proof-grid {
-  display: grid;
-  gap: 18px;
-  margin-bottom: 34px;
-}
-
-.proof-grid article {
-  padding: 24px;
-}
-
-.proof-grid strong {
-  display: block;
-  margin-bottom: 10px;
-  color: var(--color-text);
-  font-size: 1.08rem;
-  line-height: 1.35;
-}
-
-.proof-grid p {
-  color: var(--color-text-muted);
 }
 
 .copy-work-block > h3 {
@@ -942,11 +1075,6 @@ figure {
   color: var(--color-royal);
   background: rgba(238, 244, 255, 0.72);
   border-radius: 12px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.6;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
 .process-list ul {
@@ -1519,7 +1647,6 @@ figure {
     min-height: min(760px, calc(100svh - 76px));
   }
 
-  .problem-grid,
   .feature-grid,
   .copy-work-grid,
   .trust-list,
@@ -1533,24 +1660,21 @@ figure {
     align-items: center;
   }
 
+  .diagnosis-map {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .outcome-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .service-cards,
   .price-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .proof-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .case-study-card {
-    display: grid;
-    grid-template-columns: minmax(280px, 0.86fr) minmax(0, 1.14fr);
-  }
-
-  .case-study-card .case-visual {
-    min-height: 100%;
-    border-right: 1px solid var(--color-border);
-    border-bottom: 0;
+  .portfolio-works-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .ai-policy-card {
@@ -1588,11 +1712,17 @@ figure {
   }
 }
 
-@media (max-width: 640px) {
-  .work-scope-groups {
-    grid-template-columns: 1fr;
+@media (min-width: 960px) {
+  .diagnosis-map {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .outcome-flow {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
   .hero {
     display: grid;
     min-height: 780px;
@@ -1647,6 +1777,12 @@ figure {
   }
 }
 
+@media (min-width: 1120px) {
+  .portfolio-works-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 520px) {
   body {
     overflow-x: hidden;
@@ -1662,7 +1798,7 @@ figure {
   .contact-reassurance,
   .section-heading p:not(.eyebrow),
   .card p,
-  .work-body p,
+  .portfolio-work-body p,
   .about-text p,
   .faq-list p,
   .contact-intro p,
@@ -1703,16 +1839,14 @@ figure {
     height: 158px;
   }
 
-  .case-visual {
-    min-height: 178px;
-    padding: 22px;
-  }
-
-  .work-body,
   .card,
   .feature-card,
   .copy-work-card,
   .price-list article {
+    padding: 24px 22px;
+  }
+
+  .portfolio-work-body {
     padding: 24px 22px;
   }
 
