@@ -3262,3 +3262,663 @@ figure {
     padding: 20px 16px;
   }
 }
+
+/* 2026-07-26 Works categories and profile credibility */
+.works-jump-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: -18px 0 76px;
+}
+
+.works-jump-nav a {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+  padding: 18px 20px;
+  color: var(--color-navy);
+  background: rgba(238, 244, 255, 0.7);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  font-size: 0.92rem;
+  font-weight: 750;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: background 160ms ease, border-color 160ms ease;
+}
+
+.works-jump-nav a:hover {
+  background: #fff;
+  border-color: rgba(49, 87, 213, 0.36);
+}
+
+.works-jump-nav span,
+.works-group-label,
+.copy-case-overline {
+  color: var(--color-royal);
+  font-size: 0.74rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.works-category {
+  scroll-margin-top: 96px;
+}
+
+.works-category + .works-category {
+  margin-top: 104px;
+}
+
+.works-category-heading {
+  max-width: 760px;
+  margin-bottom: 34px;
+}
+
+.works-category-heading-compact {
+  max-width: none;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.works-category-heading-compact .eyebrow {
+  margin-bottom: 0;
+}
+
+.works-category-heading h3 {
+  margin-bottom: 14px;
+  color: var(--color-navy);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", YuMincho, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.28;
+}
+
+.works-category-heading > p:not(.eyebrow),
+.copy-work-heading > p {
+  max-width: 680px;
+  color: var(--color-text-muted);
+  line-height: 1.85;
+}
+
+.works-group-label {
+  margin-bottom: 13px;
+}
+
+.works-group-label-sample {
+  margin-top: 42px;
+}
+
+.copy-work-block {
+  margin-bottom: 0;
+  padding-top: 78px;
+  border-top: 1px solid var(--color-border);
+}
+
+.copy-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.copy-case-card,
+.copy-campaign-card,
+.selected-copy-list article {
+  min-width: 0;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.copy-case-card {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(26px, 4vw, 40px);
+}
+
+.copy-case-client {
+  background: linear-gradient(145deg, #ffffff 0%, #f5f8ff 100%);
+}
+
+.copy-case-award {
+  border-color: rgba(49, 87, 213, 0.3);
+}
+
+.copy-case-overline {
+  margin: 18px 0 8px;
+}
+
+.copy-case-card h4,
+.copy-campaign-copy h4,
+.selected-copy-list h4 {
+  margin: 0 0 14px;
+  color: var(--color-navy);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", YuMincho, serif;
+  font-size: clamp(1.65rem, 3vw, 2.45rem);
+  line-height: 1.34;
+}
+
+.copy-case-card h4 span {
+  display: inline-block;
+  margin-top: 5px;
+  font-family: "Hiragino Sans", "Yu Gothic", Meiryo, system-ui, sans-serif;
+  font-size: 0.55em;
+  line-height: 1.5;
+}
+
+.copy-case-card > p:not(.work-label, .copy-case-overline, .copy-case-role, .portfolio-work-note),
+.copy-campaign-copy > p:not(.work-label, .copy-case-overline),
+.selected-copy-list p:last-child {
+  color: var(--color-text-muted);
+  line-height: 1.85;
+}
+
+.copy-case-role {
+  margin-bottom: 18px;
+  color: var(--color-royal);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.copy-case-proof {
+  display: grid;
+  gap: 7px;
+  margin-bottom: 22px;
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+  font-weight: 750;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.copy-case-proof img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.copy-case-proof:hover img {
+  border-color: rgba(49, 87, 213, 0.4);
+  transform: translateY(-2px);
+}
+
+.copy-case-meta {
+  display: grid;
+  gap: 0;
+  margin: 24px 0 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.copy-case-meta div {
+  display: grid;
+  grid-template-columns: 68px minmax(0, 1fr);
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.copy-case-meta dt {
+  color: var(--color-royal);
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.copy-case-meta dd {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.copy-case-card .text-link {
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.award-copy {
+  margin: 4px 0 22px;
+  padding: 18px 20px;
+  background: var(--color-bg-alt);
+  border-left: 3px solid var(--color-royal);
+}
+
+.award-copy p {
+  color: var(--color-navy);
+  font-size: 0.9rem;
+  font-weight: 650;
+  line-height: 1.85;
+}
+
+.copy-campaign-card {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1.3fr);
+  gap: clamp(26px, 5vw, 54px);
+  margin-top: 28px;
+  padding: clamp(26px, 4vw, 42px);
+  align-items: center;
+}
+
+.copy-campaign-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 0;
+}
+
+.copy-campaign-gallery figure {
+  position: relative;
+  min-width: 0;
+  aspect-ratio: 4 / 3;
+  margin: 0;
+  overflow: hidden;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+}
+
+.copy-campaign-gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+}
+
+.copy-campaign-gallery figcaption {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  max-width: calc(100% - 16px);
+  padding: 5px 8px;
+  color: #fff;
+  background: rgba(20, 30, 50, 0.78);
+  border-radius: 6px;
+  font-size: 0.7rem;
+  line-height: 1.3;
+}
+
+.selected-copy-list {
+  margin-top: 22px;
+}
+
+.selected-copy-list article {
+  padding: 26px 30px;
+}
+
+.selected-copy-list .copy-case-overline {
+  margin-top: 0;
+}
+
+.selected-copy-list h4 {
+  margin-bottom: 8px;
+  font-size: clamp(1.35rem, 2.7vw, 2rem);
+}
+
+.copy-experience-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 18px;
+  margin: 18px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.copy-experience-list li {
+  position: relative;
+  padding: 12px 12px 12px 31px;
+  color: var(--color-navy);
+  background: rgba(238, 244, 255, 0.58);
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.copy-experience-list li::before {
+  position: absolute;
+  top: 1.05em;
+  left: 13px;
+  width: 6px;
+  height: 6px;
+  background: var(--color-royal);
+  border-radius: 50%;
+  content: "";
+}
+
+.about-editorial {
+  align-items: start;
+}
+
+.about-portrait img {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+.profile-identity {
+  margin: 28px 0 22px;
+  padding: 18px 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.profile-identity h3 {
+  margin-bottom: 3px;
+  color: var(--color-navy);
+  font-size: 1.25rem;
+}
+
+.profile-identity h3 span {
+  color: var(--color-royal);
+  font-size: 0.78em;
+}
+
+.profile-identity p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.profile-identity p span {
+  display: inline-block;
+  margin-top: 5px;
+  color: var(--color-royal);
+  font-size: 0.86em;
+  font-weight: 800;
+}
+
+.about-detail-grid {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin: 6px 0 0;
+  padding: 26px 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-stats div {
+  min-width: 0;
+  padding: 4px 24px;
+  text-align: center;
+}
+
+.about-stats div + div {
+  border-left: 1px solid var(--color-border);
+}
+
+.about-stats dt {
+  color: var(--color-navy);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", YuMincho, serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.about-stats dt span {
+  margin-left: 3px;
+  color: var(--color-royal);
+  font-family: "Hiragino Sans", "Yu Gothic", Meiryo, system-ui, sans-serif;
+  font-size: 0.38em;
+}
+
+.about-stats dd {
+  margin: 7px 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.about-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(36px, 7vw, 72px);
+  margin-top: 18px;
+}
+
+.about-detail-grid h3 {
+  margin-bottom: 22px;
+  color: var(--color-navy);
+}
+
+.career-list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--color-border);
+}
+
+.career-list li {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 16px;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.career-list time {
+  color: var(--color-royal);
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.career-list p,
+.work-value-list p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.work-value-list {
+  display: grid;
+  gap: 12px;
+}
+
+.work-value-list article {
+  padding: 20px 22px;
+  background: rgba(238, 244, 255, 0.56);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+.work-value-list h4 {
+  margin-bottom: 6px;
+  color: var(--color-navy);
+  font-size: 0.98rem;
+}
+
+@media (max-width: 919px) {
+  .copy-feature-grid,
+  .copy-campaign-card {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 719px) {
+  .works-jump-nav {
+    grid-template-columns: 1fr;
+    gap: 9px;
+    margin: -4px 0 56px;
+  }
+
+  .works-jump-nav a {
+    padding: 14px 16px;
+    font-size: 0.84rem;
+  }
+
+  .works-category + .works-category {
+    margin-top: 72px;
+  }
+
+  .works-category-heading {
+    margin-bottom: 24px;
+  }
+
+  .works-category-heading-compact {
+    margin-bottom: 16px;
+    padding-bottom: 9px;
+  }
+
+  .works-category-heading h3 {
+    margin-bottom: 10px;
+    font-size: 1.62rem;
+    line-height: 1.35;
+  }
+
+  .works-category-heading > p:not(.eyebrow),
+  .copy-work-heading > p {
+    font-size: 0.88rem;
+    line-height: 1.75;
+  }
+
+  .works-group-label-sample {
+    margin-top: 30px;
+  }
+
+  .copy-work-block {
+    padding-top: 54px;
+  }
+
+  .copy-feature-grid {
+    gap: 16px;
+  }
+
+  .copy-case-card,
+  .copy-campaign-card,
+  .selected-copy-list article {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .copy-case-card h4,
+  .copy-campaign-copy h4 {
+    font-size: 1.55rem;
+  }
+
+  .copy-case-proof {
+    margin-bottom: 18px;
+  }
+
+  .copy-case-card > p:not(.work-label, .copy-case-overline, .copy-case-role, .portfolio-work-note),
+  .copy-campaign-copy > p:not(.work-label, .copy-case-overline),
+  .selected-copy-list p:last-child {
+    font-size: 0.88rem;
+    line-height: 1.75;
+  }
+
+  .copy-case-meta {
+    margin-top: 18px;
+  }
+
+  .copy-case-meta div {
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 9px;
+  }
+
+  .award-copy {
+    padding: 15px 16px;
+  }
+
+  .award-copy p {
+    font-size: 0.84rem;
+    line-height: 1.75;
+  }
+
+  .copy-campaign-card {
+    gap: 22px;
+    margin-top: 18px;
+  }
+
+  .copy-campaign-gallery {
+    gap: 8px;
+  }
+
+  .copy-campaign-gallery figcaption {
+    font-size: 0.62rem;
+  }
+
+  .copy-experience-list {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0;
+  }
+
+  .about-stats div {
+    padding: 20px 10px;
+  }
+
+  .about-stats div + div {
+    border-left: 0;
+  }
+
+  .about-stats div:nth-child(even) {
+    border-left: 1px solid var(--color-border);
+  }
+
+  .about-stats div:nth-child(n + 3) {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .about-stats dt {
+    font-size: 1.9rem;
+  }
+
+  .about-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    margin-top: 8px;
+  }
+
+  .profile-identity {
+    margin: 22px 0 17px;
+    padding: 14px 0;
+  }
+
+  .career-list li {
+    grid-template-columns: 78px minmax(0, 1fr);
+    gap: 12px;
+    padding: 14px 0;
+  }
+
+  .career-list p,
+  .work-value-list p {
+    font-size: 0.86rem;
+    line-height: 1.7;
+  }
+
+  .work-value-list article {
+    padding: 17px 18px;
+  }
+}
+
+@media (max-width: 369px) {
+  .copy-campaign-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .copy-campaign-gallery figure {
+    aspect-ratio: 16 / 10;
+  }
+
+  .career-list li {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+}

@@ -1,6 +1,6 @@
 # Kai Creative Works
 
-言葉がまとまっていない個人・小規模事業者に向けて、ヒアリング、コピー、構成、Webデザイン、レスポンシブ実装まで一人で担当する制作サービスの営業LPです。
+言葉がまとまっていない個人・小規模事業者に向けて、ヒアリング、コピー、構成、Webデザイン、レスポンシブ実装まで担当する制作サービスの営業LPです。
 
 - 公開URL: `https://kcw000.github.io/my-page/`
 - 公開方法: GitHub Pages
@@ -21,23 +21,24 @@
 2. Hero
 3. Works
 4. Services
-5. 相談できる状態・依頼する理由
-6. Process
-7. Price
-8. About
-9. FAQ
-10. Contact
-11. Footer
+5. Process
+6. Price
+7. About
+8. FAQ
+9. Contact
+10. Footer
 
-WorksをHero直後へ移し、NENE LPを課題・対応・担当まで読める主事例として掲載しています。LILTとかくれ本は実在企業から受注した案件ではないため、画面上で `自主制作｜サンプルLP` と明示しています。
+WorksをHero直後へ配置し、`LP / WEB` と `COPY / BRAND LANGUAGE` に分けています。NENE LPを課題・対応・担当まで読める主事例として掲載し、LILTとかくれ本は実在企業から受注した案件ではないため、画面上で `自主制作｜サンプルLP` と明示しています。
+
+コピー実績は、河村醤油の公開中実案件、第61回宣伝会議賞のGENDA GiGO Entertainment協賛企業賞、Moominの受賞・広告採用実績を、担当範囲が誤解されない形で掲載しています。河村醤油とGiGOには公開ページの該当部分をキャプチャした証拠画像を添えています。GiGOの映像制作は本人の担当ではないため、株式会社Vook制作であることを明記しています。
 
 Heroのメインコピーは「伝えたい想いを、伝わる言葉とデザインに。」です。「まだ言葉になっていない魅力を、問い合わせにつながるLPへ。」は補足コピーとして小さく表示します。
 
 Hero背景には `visual/hero/hero-motion.mp4` を使用しています。動画はミュート・自動再生・ループ・インライン再生とし、`visual/hero-main.jpg` をposter兼フォールバックとして維持しています。OSやブラウザで「視差効果を減らす」「動きを減らす」が有効な場合は静止画を表示します。
 
-Services、相談できる状態・依頼する理由、Processは、文章だけの一覧にせず、既存ビジュアルまたはローカル線画アイコンを使ったカード形式で表示します。
+ServicesとProcessは、文章だけの一覧にせず、既存ビジュアルまたはローカル線画アイコンを使って表示します。Hero、Services、Process、Contactと内容が重複していた「相談できる状態・依頼する理由」セクションは削除しています。
 
-コピー・ブランド言語設計は、採用・掲載許可の区分を確認できていないため、企業名を伏せた `提案例｜匿名掲載` としています。確認できるまでは実案件や採用実績として扱わないでください。
+コピー・ブランド言語設計は、掲載許可または公開情報を確認できた実績だけ企業名・受賞区分を掲載しています。担当範囲を越えて、Webサイト全体や映像自体を制作したと誤解される表現は使用しないでください。
 
 ## 使用技術
 
@@ -67,11 +68,15 @@ Services、相談できる状態・依頼する理由、Processは、文章だ�
     │   ├── LICENSE.txt
     │   └── *.svg
     ├── works/
+    │   ├── copy/
+    │   │   ├── gigo-award.jpg
+    │   │   ├── kawamura-page.jpg
+    │   │   ├── moomin-poster.jpg
+    │   │   └── moomin-signage.jpg
     │   ├── kakurebon-lp.png
     │   ├── lilt-lp.jpg
     │   ├── nene-cover-source.png
-    │   ├── nene-cover.jpg
-    │   └── nene-lp.png
+    │   └── nene-cover.jpg
     ├── hero-main.jpg
     ├── ogp.jpg
     └── visual_*.png
@@ -85,14 +90,23 @@ Services、相談できる状態・依頼する理由、Processは、文章だ�
 - `photo/profile.jpg`: Aboutのプロフィール写真
 - `visual/works/nene-cover.jpg`: WorksのNENE代表事例に表示する軽量カバー画像
 - `visual/works/nene-cover-source.png`: 採用したNENEカバー画像の原本
-- `visual/works/nene-lp.png`: 以前使用していたNENE LPの公開画面
 - `visual/works/lilt-lp.jpg`: LILT Dance & Conditioningの公開画面
 - `visual/works/kakurebon-lp.png`: かくれ本LPの公開画面
+- `visual/works/copy/kawamura-page.jpg`: 河村醤油の公開ページにコピーが掲載されていることを示す画面キャプチャ
+- `visual/works/copy/gigo-award.jpg`: 宣伝会議賞公式ページの協賛企業賞・作品・受賞者を示す画面キャプチャ
+- `visual/works/copy/moomin-signage.jpg`: 同作品のデジタルサイネージ掲出写真
+- `visual/works/copy/moomin-poster.jpg`: 同作品のポスター掲出写真
 - `visual/icons/*.svg`: ローカル保存したLucide線画アイコン
 
 Hero動画やWorks画像を差し替える場合は、HTMLの参照先を変えず、同名ファイルを適切な寸法・容量で置き換えると管理しやすくなります。Hero動画はMP4形式を使用し、音声を前提にしない内容にしてください。人物や制作画面を確認できない場合は、推測した代替素材を作らず、公開前に素材を確認してください。
 
 NENEのカバーは、候補画像のうち顔全体が見え、PC・スマホ双方のトリミングに耐えやすい画像を採用しています。表示には軽量版を使い、選定の根拠を後から確認できるよう原本も保存しています。
+
+Moomin実績は、実際の掲出が分かるサイネージ画像とポスター画像の2点に絞っています。元画像はiCloud側に残し、サイトでは `visual/works/copy/` 内のWeb向け軽量版を使用します。
+
+河村醤油とGiGOの画面キャプチャは、実績の根拠が分かる部分だけを使用しています。掲載内容や公開ページのデザインが変わった場合は、リンク先とキャプチャの整合を確認してください。
+
+Aboutのプロフィール写真を差し替える場合は、`photo/profile.jpg` を同名で置き換えます。表示枠は4:5で、人物の顔と上半身が中央に収まる縦位置の写真を推奨します。HTMLの `width` / `height` とaltも、実画像に合わせて確認してください。
 
 `visual/icons/*.svg` はLucide 1.8.0（ISC License）です。ライセンス本文は `visual/icons/LICENSE.txt` に保存しています。線画以外の立体アイコン、発光、過度なグラデーションを混在させないでください。
 
@@ -101,6 +115,9 @@ NENEのカバーは、候補画像のうち顔全体が見え、PC・スマホ�
 - NENE LP: `https://kcw000.github.io/nene-lp/`
 - LILT Dance & Conditioning: `https://lilt-dance-conditioning.ka1note.chatgpt.site`
 - かくれ本: `https://kakurebon-campaign.ka1note.chatgpt.site`
+- 河村醤油「河村醤油について」: `https://www.kawamura-shoyu.co.jp/?mode=f1`
+- 第61回 宣伝会議賞: `https://awardg.sendenkaigi.com/senden/history/61`
+- AdverTimes「池袋『GiGO総本店』1周年 『宣伝会議賞』の受賞作を活用」: `https://www.advertimes.com/20240920/article474510/`
 
 外部リンクには `target="_blank" rel="noopener noreferrer"` を設定しています。
 
@@ -170,7 +187,7 @@ ContactフォームはFormspreeへ接続しています。
 ## ローカル確認
 
 ```bash
-cd /Users/kai/Codex/my-page
+cd path/to/my-page
 python3 -m http.server 8000
 ```
 
@@ -189,7 +206,9 @@ python3 -m http.server 8000
 ### 公開前チェック
 
 - Hero画像、コピー、2つのCTAが自然に表示される
-- Worksの3つの外部リンクと制作区分が正しい
+- WorksのLP / Web 3件とコピー実績の外部リンク・制作区分・担当範囲が正しい
+- 河村醤油とGiGOの証拠画像、Moominのサイネージ・ポスター画像が用途どおりに表示される
+- Aboutのプロフィール、コピーライティング歴5年以上、養成講座修了を含む経歴、進め方がPC・スマホで読みやすい
 - サービスCTAがフォームへ反映される
 - FAQの各項目が独立して開閉する
 - スマホメニューが開閉し、Escapeで閉じられる
