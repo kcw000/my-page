@@ -86,7 +86,7 @@ ServicesとProcessは、文章だけの一覧にせず、既存ビジュアル�
 
 - `visual/hero/hero-motion.mp4`: Hero背景動画。ミュート・自動再生・ループ・インライン再生で使用
 - `visual/hero-main.jpg`: Hero動画のposter兼フォールバック画像
-- `visual/ogp.jpg`: 1200 × 630pxのOGP / Twitter Card画像
+- `visual/ogp.jpg`: 1200 × 630pxのOGP / Twitter Card画像。最新のHeroコピー、対応領域、プロフィール写真を使ったリンク共有用ビジュアル
 - `photo/profile.jpg`: Aboutのプロフィール写真
 - `visual/works/nene-cover.jpg`: WorksのNENE代表事例に表示する軽量カバー画像
 - `visual/works/nene-cover-source.png`: 採用したNENEカバー画像の原本
