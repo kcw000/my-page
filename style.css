@@ -3875,7 +3875,50 @@ figure {
 
 /* Shared labels and price carousel across desktop and mobile */
 .hero-subcopy {
-  font-size: 13px;
+  font-size: 1rem;
+}
+
+.hero-title span {
+  color: var(--color-royal);
+}
+
+.service-visual {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  margin-bottom: 24px;
+  overflow: hidden;
+  background: #f8faff;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+}
+
+.service-visual > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.career-list p strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--color-navy);
+  font-size: 0.94rem;
+}
+
+@media (min-width: 1080px) {
+  .process-list > li:not(:last-child)::after {
+    position: absolute;
+    top: 50%;
+    right: -18px;
+    z-index: 2;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid var(--color-cornflower);
+    border-bottom: 2px solid var(--color-cornflower);
+    content: "";
+    transform: translateY(-50%) rotate(-45deg);
+  }
 }
 
 #works > .section-shell > .works-heading > .eyebrow,
@@ -3987,6 +4030,29 @@ figure {
 }
 
 @media (max-width: 719px) {
+  .hero-subcopy {
+    font-size: 11px;
+  }
+
+  .service-visual {
+    margin-bottom: 18px;
+    border-radius: 12px;
+  }
+
+  .process-list > li:not(:last-child)::after {
+    position: absolute;
+    right: auto;
+    bottom: -18px;
+    left: 50%;
+    z-index: 2;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid var(--color-cornflower);
+    border-bottom: 2px solid var(--color-cornflower);
+    content: "";
+    transform: translateX(-50%) rotate(45deg);
+  }
+
   .price-group-heading {
     margin-bottom: 16px;
   }
@@ -3996,5 +4062,24 @@ figure {
     width: min(82vw, 310px);
     min-width: min(82vw, 310px);
     flex-basis: min(82vw, 310px);
+  }
+}
+
+@media (min-width: 720px) {
+  .hero-title {
+    max-width: 840px;
+    font-size: clamp(2.9rem, 4.3vw, 4rem);
+  }
+
+  .hero-title span {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 719px) {
+  .hero-title {
+    max-width: 100%;
+    font-size: 1.85rem;
+    line-height: 1.34;
   }
 }
