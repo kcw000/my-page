@@ -28,7 +28,7 @@
     <meta name="twitter:image:alt" content="Kai Creative Worksのコピー・情報設計・Web・LP制作サービス紹介">
     <link rel="icon" href="visual/visual_02.png" type="image/png">
     <link rel="preload" as="image" href="visual/hero-main.jpg">
-    <link rel="stylesheet" href="style.css?v=20260726-5">
+    <link rel="stylesheet" href="style.css?v=20260726-7">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -132,7 +132,7 @@
         <div class="hero-overlay" aria-hidden="true"></div>
         <div class="hero-content section-shell">
           <h1 id="hero-title" class="hero-title">伝えたい想いを、<br>伝わる言葉とデザインに。</h1>
-          <p class="hero-subcopy">まだ言葉になっていない魅力を、問い合わせにつながるLPへ。</p>
+          <p class="hero-subcopy">眠ってる価値を書き起こし、問い合わせにつながるLPへ。</p>
           <p class="lead">個人・小規模事業者向けに、ヒアリングからコピー、構成、デザイン、実装まで担当します。</p>
           <div class="button-row" aria-label="主な導線">
             <a class="button primary" href="#contact">制作について相談する</a>
@@ -150,11 +150,6 @@
             <h2>制作事例</h2>
             <p>ヒアリング、コピー、情報設計、デザイン、実装まで、目的に合わせて一貫して制作しています。</p>
           </div>
-
-          <nav class="works-jump-nav" aria-label="制作実績のカテゴリ">
-            <a href="#works-web"><span>LP / WEB</span>LP・Web制作を見る</a>
-            <a href="#works-copy"><span>COPY / BRAND LANGUAGE</span>コピー・言語設計を見る</a>
-          </nav>
 
           <section id="works-web" class="works-category" aria-label="LP・Web制作実績">
             <div class="works-category-heading works-category-heading-compact">
@@ -272,9 +267,6 @@
                   <img src="visual/works/copy/gigo-award.jpg" alt="宣伝会議賞公式ページに掲載された協賛企業賞受賞作品「お見合い 篇」と受賞者名" width="900" height="600" loading="lazy">
                   <span>宣伝会議賞公式ページの受賞掲載</span>
                 </a>
-                <blockquote class="award-copy">
-                  <p>男性：あの、ご趣味は。<br>女性：太鼓と、ダンスと、ドライブと、銃を少々。<br>男性：え、銃？<br>NA：いろんな遊びが盛りだくさん。GiGO。</p>
-                </blockquote>
                 <p>普段あまりゲームセンターを利用しない人に、GiGOへ興味を持ってもらう課題に対して制作した動画広告企画です。受賞作品をもとに株式会社Vookが映像化し、GiGO総本店の屋外壁面大型ビジョンで放映されました。</p>
                 <p class="portfolio-work-note">本人の担当は動画広告企画・コピーです。映像制作は株式会社Vookによるものです。</p>
                 <a class="text-link" href="https://www.advertimes.com/20240920/article474510/" target="_blank" rel="noopener noreferrer">映像化・放映の記事を見る</a>
@@ -431,8 +423,14 @@
             <p>必要な範囲を選びやすいよう、単品メニューとセットに分けています。</p>
           </div>
           <div class="price-group">
-            <h3 class="price-group-title">単品メニュー</h3>
-            <div class="price-list price-list-single">
+            <div class="price-group-heading">
+              <h3 class="price-group-title">単品メニュー</h3>
+              <div class="price-slider-controls" aria-label="単品メニューの表示切り替え">
+                <button type="button" class="price-slider-button" data-price-direction="-1" aria-label="前の単品メニューを表示">←</button>
+                <button type="button" class="price-slider-button" data-price-direction="1" aria-label="次の単品メニューを表示">→</button>
+              </div>
+            </div>
+            <div class="price-list price-list-single" data-price-slider tabindex="0" aria-label="単品メニュー一覧">
               <article><span class="price-label">Copy</span><h4>キャッチコピー作成</h4><strong>20,000円</strong><p>キャッチコピー10案と、方向性を合わせる修正1回を含みます。</p></article>
               <article><span class="price-label">Writing</span><h4>ボディコピー作成</h4><strong>30,000円</strong><p>サービスの価値や背景を、読み手に伝わる本文へ整理します。</p></article>
               <article><span class="price-label">Brand Language</span><h4>MVV作成</h4><strong>30,000円</strong><p>Mission・Vision・Valueを、活動の判断軸として使える言葉へ整えます。</p></article>
@@ -440,8 +438,14 @@
             </div>
           </div>
           <div class="price-group price-group-set">
-            <h3 class="price-group-title">セット</h3>
-            <div class="price-list price-list-set">
+            <div class="price-group-heading">
+              <h3 class="price-group-title">セット</h3>
+              <div class="price-slider-controls" aria-label="セットメニューの表示切り替え">
+                <button type="button" class="price-slider-button" data-price-direction="-1" aria-label="前のセットメニューを表示">←</button>
+                <button type="button" class="price-slider-button" data-price-direction="1" aria-label="次のセットメニューを表示">→</button>
+              </div>
+            </div>
+            <div class="price-list price-list-set" data-price-slider tabindex="0" aria-label="セットメニュー一覧">
               <article>
                 <span class="price-label">Copy Set</span>
                 <h4>キャッチコピー＋ボディコピー作成</h4>
@@ -460,7 +464,7 @@
           </div>
           <div class="price-note">
             <p><strong>見積もりで確認する項目</strong><br>フォーム実装、画像・文章素材の準備範囲、修正回数、公開作業、納期、サーバー・ドメイン費、税区分は、要件確認後に見積書で明示します。</p>
-            <p>フライヤー、SNS画像、サムネイル、動画編集など、Web制作に付随する制作も内容に応じてお見積もりします。</p>
+            <p>フライヤーやサムネイルなどの画像制作、動画編集やBGM制作など、Web制作に付随する制作も内容に応じてお見積もりします。</p>
             <p>迷う場合は、フォームで「まだ決まっていない」を選んでください。必要な範囲から一緒に整理します。</p>
           </div>
         </div>
@@ -477,7 +481,7 @@
             <h2>なにを書くか、<br>なにが核か。</h2>
             <p class="about-lead">Kai Creative Worksは、言葉や情報がまだ整理されていない個人・小規模事業者・チームのために、ヒアリングからコピー制作、公開できるLPまで整えます。</p>
             <div class="profile-identity">
-              <h3>飯盛 海 <span>/ Kai</span></h3>
+              <h3>飯盛 海 <span>/ Isakari Kai</span></h3>
               <p>コピーライター・Web / LPクリエイター<br><span>コピーライティング歴5年以上</span></p>
             </div>
             <p>福岡を拠点に活動しています。電子部品メーカーで7年間、製品評価や技術開発に携わった後、「言葉で人の心を動かす仕事にしたい」と考え、2021年からコピーライターとして活動を始めました。</p>
@@ -595,11 +599,10 @@
                 <span>ご予算 <small class="optional-label">任意</small></span>
                 <select id="budget" name="budget" aria-describedby="budget-help">
                   <option value="">選択してください</option>
-                  <option>3万円未満</option>
-                  <option>3万円〜5万円</option>
+                  <option>2万円未満</option>
+                  <option>2万円〜5万円</option>
                   <option>5万円〜10万円</option>
-                  <option>10万円〜20万円</option>
-                  <option>20万円以上</option>
+                  <option>10万円以上</option>
                   <option>まだ決まっていない</option>
                   <option>相談して決めたい</option>
                 </select>
@@ -650,6 +653,6 @@
       <small>&copy; 2026 Kai Creative Works. All rights reserved.</small>
     </footer>
 
-    <script src="script.js?v=20260726-1"></script>
+    <script src="script.js?v=20260726-2"></script>
   </body>
 </html>

@@ -101,6 +101,51 @@ if (navToggle && siteNav) {
   syncMenuAccessibility();
 }
 
+document.querySelectorAll(".price-group").forEach((group) => {
+  const slider = group.querySelector("[data-price-slider]");
+  const buttons = group.querySelectorAll("[data-price-direction]");
+
+  if (!(slider instanceof HTMLElement) || buttons.length === 0) {
+    return;
+  }
+
+  const updateControls = () => {
+    const maxScroll = Math.max(0, slider.scrollWidth - slider.clientWidth);
+
+    buttons.forEach((button) => {
+      if (!(button instanceof HTMLButtonElement)) {
+        return;
+      }
+
+      const direction = Number(button.dataset.priceDirection);
+      button.disabled = direction < 0 ? slider.scrollLeft <= 2 : slider.scrollLeft >= maxScroll - 2;
+    });
+  };
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const firstCard = slider.querySelector("article");
+
+      if (!(firstCard instanceof HTMLElement)) {
+        return;
+      }
+
+      const gap = Number.parseFloat(getComputedStyle(slider).gap) || 0;
+      const direction = Number(button.dataset.priceDirection) || 1;
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      slider.scrollBy({
+        left: direction * (firstCard.getBoundingClientRect().width + gap),
+        behavior: reduceMotion ? "auto" : "smooth",
+      });
+    });
+  });
+
+  slider.addEventListener("scroll", updateControls, { passive: true });
+  window.addEventListener("resize", updateControls);
+  requestAnimationFrame(updateControls);
+});
+
 const contactForm = document.querySelector(".contact-form");
 
 if (contactForm) {
