@@ -68,7 +68,14 @@ Aboutはスマホで経歴が長く続かないよう、経歴ハイライトを
     │   └── hero-motion.mp4
     ├── icons/
     │   ├── LICENSE.txt
-    │   └── *.svg
+    │   ├── clipboard-check.svg
+    │   ├── message-circle.svg
+    │   ├── monitor-check.svg
+    │   └── panels-top-left.svg
+    ├── services/
+    │   ├── content-planning.png
+    │   ├── copywriting.png
+    │   └── lp-web.png
     ├── works/
     │   ├── copy/
     │   │   ├── gigo-award.jpg
@@ -81,7 +88,7 @@ Aboutはスマホで経歴が長く続かないよう、経歴ハイライトを
     │   └── nene-cover.jpg
     ├── hero-main.jpg
     ├── ogp.jpg
-    └── visual_*.png
+    └── visual_02.png
 ```
 
 ## 使用画像・動画
@@ -98,7 +105,9 @@ Aboutはスマホで経歴が長く続かないよう、経歴ハイライトを
 - `visual/works/copy/gigo-award.jpg`: 宣伝会議賞公式ページの協賛企業賞・作品・受賞者を示す画面キャプチャ
 - `visual/works/copy/moomin-signage.jpg`: 同作品のデジタルサイネージ掲出写真
 - `visual/works/copy/moomin-poster.jpg`: 同作品のポスター掲出写真
-- `visual/icons/*.svg`: ローカル保存したLucide線画アイコン
+- `visual/visual_02.png`: faviconとして使用する画像
+- `visual/services/*.png`: Servicesの3項目を区別するWeb向け画像
+- `visual/icons/*.svg`: Processで使用する4点のLucide線画アイコン
 
 Hero動画やWorks画像を差し替える場合は、HTMLの参照先を変えず、同名ファイルを適切な寸法・容量で置き換えると管理しやすくなります。Hero動画はMP4形式を使用し、音声を前提にしない内容にしてください。人物や制作画面を確認できない場合は、推測した代替素材を作らず、公開前に素材を確認してください。
 
