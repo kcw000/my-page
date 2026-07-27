@@ -163,8 +163,8 @@ if (contactForm) {
     }
 
     budgetHelp.textContent =
-      serviceSelect.value === "LP・Webページ制作"
-        ? "LP・Webページ制作の基本料金は80,000円です。内容により追加見積もりとなります。"
+      serviceSelect.value === "Webページ・LP制作"
+        ? "Webページ・LP制作の基本料金は80,000円です。内容により追加見積もりとなります。"
         : defaultBudgetHelp;
   };
 
